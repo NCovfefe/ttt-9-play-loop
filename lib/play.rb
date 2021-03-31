@@ -35,4 +35,18 @@ def turn(board)
   end
 end
 
+def is_full(board)
+  for i in 0..8
+    if board[i] == ' '
+      return false
+    end
+  end
+  return true
+end
+
 # Define your play method below
+def play(board)
+  while !is_full(board) do
+    turn(board)
+  end
+end
